@@ -4,10 +4,11 @@ import './card-list.styles.css';
 import './card.styles.css';
 
 const CardList = ({ monsters }) => {
+  let i = 0
   return (
     <div className='card-list'>
       {
-        monsters.map(monster => <Card monster={monster} />)
+        monsters.map(monster => <Card monster={monster} key={i++} />)
       }
     </div>
   );
